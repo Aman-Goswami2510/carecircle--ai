@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-rgb: 248, 250, 252;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessible High Contrast Mode */
+.high-contrast {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+  filter: contrast(125%);
+}
+
+.high-contrast button {
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast .card {
+  border: 2px solid #000000 !important;
+}
+
+/* Focus outline for full keyboard accessibility */
+*:focus-visible {
+  outline: 3px solid #0284c7;
+  outline-offset: 3px;
+}
+
